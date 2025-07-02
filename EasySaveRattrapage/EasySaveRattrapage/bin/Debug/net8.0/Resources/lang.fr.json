@@ -19,5 +19,6 @@
   "message.jobNotFound": "Sauvegarde non trouvee.",
   "message.jobDeleted": "Sauvegarde supprimee.",
   "message.jobListEmpty": "Aucune sauvegarde enregistree.",
-  "message.jobListHeader": "Sauvegardes enregistrees :"
+  "message.jobListHeader": "Sauvegardes enregistrees :",
+  "message.jobRunning": "Démarrage sauvegarde : {0}"
 }

@@ -11,7 +11,7 @@ namespace Views
         public MainView(LanguageController languageController)
         {
             this.languageController = languageController;
-            backupJobController = new BackupJobController();
+            backupJobController = new BackupJobController(languageController);
         }
 
         public void ShowMenu()
@@ -24,13 +24,13 @@ namespace Views
                 Console.ResetColor();
 
                 Console.WriteLine("╔═══════════════════════════════════════════════╗");
-                Console.WriteLine($"║ 1. {languageController.T("menu.createJob"),-40}║");
-                Console.WriteLine($"║ 2. {languageController.T("menu.listJobs"),-40}║");
-                Console.WriteLine($"║ 3. {languageController.T("menu.runOneJob"),-40}║");
-                Console.WriteLine($"║ 4. {languageController.T("menu.runAllJobs"),-40}║");
-                Console.WriteLine($"║ 5. {languageController.T("menu.deleteJob"),-40}║");
-                Console.WriteLine($"║ 6. {languageController.T("menu.changeLang"),-40}║");
-                Console.WriteLine($"║ 0. {languageController.T("menu.exit"),-40}║");
+                Console.WriteLine($"║ 1. {languageController.T("menu.createJob"),-43}║");
+                Console.WriteLine($"║ 2. {languageController.T("menu.listJobs"),-43}║");
+                Console.WriteLine($"║ 3. {languageController.T("menu.runOneJob"),-43}║");
+                Console.WriteLine($"║ 4. {languageController.T("menu.runAllJobs"),-43}║");
+                Console.WriteLine($"║ 5. {languageController.T("menu.deleteJob"),-43}║");
+                Console.WriteLine($"║ 6. {languageController.T("menu.changeLang"),-43}║");
+                Console.WriteLine($"║ 0. {languageController.T("menu.exit"),-43}║");
                 Console.WriteLine("╚═══════════════════════════════════════════════╝");
                 Console.Write(languageController.T("menu.choice"));
 

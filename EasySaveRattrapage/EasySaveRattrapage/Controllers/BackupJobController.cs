@@ -15,32 +15,49 @@ namespace Controllers
         private List<BackupJob> backupJobs;
         private readonly BackupService backupService;
         private readonly LogService logService;
+        private readonly LanguageController languageController;
 
-        public BackupJobController()
+        public BackupJobController(LanguageController languageController)
         {
+            this.languageController = languageController;
             backupService = new BackupService();
             logService = new LogService();
             LoadJobs();
         }
 
+        private string T(string key) => languageController.T(key);
+
         public void CreateBackupJob()
         {
             Console.Clear();
-            Console.WriteLine("=== Create a new Backup Job ===");
+            Console.WriteLine("=== " + T("menu.createJob") + " ===");
 
-            Console.Write("Enter job name: ");
-            string name = Console.ReadLine();
+            if (backupJobs.Count >= MaxBackupJobs)
+            {
+                Console.WriteLine(string.Format(T("message.maxJobsReached"), MaxBackupJobs));
+                return;
+            }
 
-            Console.Write("Enter source directory: ");
-            string source = Console.ReadLine();
+            string name;
+            do
+            {
+                Console.Write(T("prompt.jobName"));
+                name = Console.ReadLine()?.Trim();
 
-            Console.Write("Enter target directory: ");
-            string target = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(name))
+                    Console.WriteLine(T("message.jobNameEmpty"));
+            } while (string.IsNullOrWhiteSpace(name));
+
+            Console.Write(T("prompt.sourcePath"));
+            string source = Console.ReadLine()?.Trim();
+
+            Console.Write(T("prompt.targetPath"));
+            string target = Console.ReadLine()?.Trim();
 
             BackupType type;
             while (true)
             {
-                Console.Write("Enter backup type (Full / Differential): ");
+                Console.Write(T("prompt.type"));
                 string typeInput = Console.ReadLine()?.Trim().ToLower();
 
                 if (typeInput == "full")
@@ -55,7 +72,7 @@ namespace Controllers
                 }
                 else
                 {
-                    Console.WriteLine("Invalid type. Please enter 'Full' or 'Differential'.");
+                    Console.WriteLine(T("message.invalidType"));
                 }
             }
 
@@ -68,18 +85,19 @@ namespace Controllers
             };
 
             backupJobs.Add(job);
-            Console.WriteLine("Backup job created successfully!");
+            SaveJobs();
+            Console.WriteLine(T("message.jobCreated"));
         }
 
         public void ListBackupJobs()
         {
             if (backupJobs.Count == 0)
             {
-                Console.WriteLine("No backup jobs found.");
+                Console.WriteLine(T("message.jobListEmpty"));
                 return;
             }
 
-            Console.WriteLine("List of backup jobs:");
+            Console.WriteLine(T("message.jobListHeader"));
             foreach (var job in backupJobs)
             {
                 Console.WriteLine($"- {job.Name} | Source: {job.SourcePath} | Target: {job.TargetPath} | Type: {job.Type}");
@@ -91,11 +109,11 @@ namespace Controllers
             var job = backupJobs.FirstOrDefault(j => j.Name.Equals(jobName, StringComparison.OrdinalIgnoreCase));
             if (job == null)
             {
-                Console.WriteLine($"Backup job '{jobName}' not found.");
+                Console.WriteLine(T("message.jobNotFound"));
                 return;
             }
 
-            Console.WriteLine($"Running backup job '{job.Name}'...");
+            Console.WriteLine(string.Format(T("message.jobRunning"), job.Name));
             backupService.ExecuteBackup(job);
         }
 
@@ -103,13 +121,13 @@ namespace Controllers
         {
             if (backupJobs.Count == 0)
             {
-                Console.WriteLine("No backup jobs to run.");
+                Console.WriteLine(T("message.jobListEmpty"));
                 return;
             }
 
             foreach (var job in backupJobs)
             {
-                Console.WriteLine($"Running backup job '{job.Name}'...");
+                Console.WriteLine(string.Format(T("message.jobRunning"), job.Name));
                 backupService.ExecuteBackup(job);
             }
         }
@@ -119,14 +137,13 @@ namespace Controllers
             var job = backupJobs.FirstOrDefault(j => j.Name.Equals(jobName, StringComparison.OrdinalIgnoreCase));
             if (job == null)
             {
-                Console.WriteLine($"Backup job '{jobName}' not found.");
+                Console.WriteLine(T("message.jobNotFound"));
                 return;
             }
 
             backupJobs.Remove(job);
             SaveJobs();
-
-            Console.WriteLine($"Backup job '{jobName}' deleted.");
+            Console.WriteLine(T("message.jobDeleted"));
         }
 
         private void LoadJobs()
@@ -148,7 +165,7 @@ namespace Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error loading backup jobs: {ex.Message}");
+                Console.WriteLine($"{T("error.loadJobs")} {ex.Message}");
                 backupJobs = new List<BackupJob>();
             }
         }
@@ -168,7 +185,7 @@ namespace Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error saving backup jobs: {ex.Message}");
+                Console.WriteLine($"{T("error.saveJobs")} {ex.Message}");
             }
         }
     }

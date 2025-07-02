@@ -15,7 +15,7 @@ namespace Services
         {
             if (!Directory.Exists(job.SourcePath))
             {
-                Console.WriteLine($"Source directory does not exist: {job.SourcePath}");
+                Console.WriteLine($"Source directory  [ {job.SourcePath} ] does not exist. / Le chemin [ {job.SourcePath} ] n'est pas trouve.");
                 return;
             }
 
@@ -141,7 +141,7 @@ namespace Services
             Console.Write(output);
 
             if (current == total)
-                Console.WriteLine(); // Saut de ligne à la fin
+                Console.WriteLine(); 
         }
     }
 }
