@@ -1,0 +1,15 @@
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\bin\Debug\net8.0\EasySaveRattrapage.exe
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\bin\Debug\net8.0\EasySaveRattrapage.deps.json
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\bin\Debug\net8.0\EasySaveRattrapage.runtimeconfig.json
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\bin\Debug\net8.0\EasySaveRattrapage.dll
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\bin\Debug\net8.0\EasySaveRattrapage.pdb
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\EasySaveRattrapage.GeneratedMSBuildEditorConfig.editorconfig
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\EasySaveRattrapage.AssemblyInfoInputs.cache
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\EasySaveRattrapage.AssemblyInfo.cs
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\EasySaveRattrapage.csproj.CoreCompileInputs.cache
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\EasySaveRattrapage.sourcelink.json
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\EasySaveRattrapage.dll
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\refint\EasySaveRattrapage.dll
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\EasySaveRattrapage.pdb
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\EasySaveRattrapage.genruntimeconfig.cache
+D:\programme\Visual_Studio\EasySaveRattrapage\EasySaveRattrapage\obj\Debug\net8.0\ref\EasySaveRattrapage.dll
