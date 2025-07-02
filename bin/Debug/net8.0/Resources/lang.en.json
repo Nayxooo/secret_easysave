@@ -1,0 +1,23 @@
+{
+  "menu.createJob": "Create a new backup job",
+  "menu.listJobs": "List existing backup jobs",
+  "menu.runOneJob": "Run a backup job",
+  "menu.runAllJobs": "Run all backup jobs",
+  "menu.deleteJob": "Delete a backup job",
+  "menu.exit": "Exit",
+  "menu.choice": "Enter your choice: ",
+  "menu.invalidChoice": "Invalid choice. Try again.",
+  "menu.enterJobName": "Enter the job name: ",
+  "menu.pressEnter": "Press Enter to continue...",
+  "menu.changeLang": "Change language",
+  "prompt.jobName": "Enter job name: ",
+  "prompt.sourcePath": "Enter source directory: ",
+  "prompt.targetPath": "Enter target directory: ",
+  "prompt.type": "Enter backup type (full/differential): ",
+  "message.jobCreated": "Backup job created successfully.",
+  "message.jobExists": "A job with this name already exists.",
+  "message.jobNotFound": "Backup job not found.",
+  "message.jobDeleted": "Backup job deleted.",
+  "message.jobListEmpty": "No backup jobs found.",
+  "message.jobListHeader": "Registered Backup Jobs:"
+}
