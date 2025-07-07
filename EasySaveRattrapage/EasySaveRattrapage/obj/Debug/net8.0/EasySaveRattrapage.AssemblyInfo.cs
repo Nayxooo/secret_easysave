@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasySaveRattrapage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c2ecb8bc55b09662a034477c5d0945b3fa4ea54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d662cc52d66007b1237f306d44df634c97dd68f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasySaveRattrapage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasySaveRattrapage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
