@@ -1,139 +1,72 @@
-# 🛡️ Backup Manager Console App
+EasySave
+A robust C# file backup application with a Terminal interface for efficiently managing backup jobs.
 
-A multilingual C# console application for managing and executing file backup jobs. Supports full and differential backups, persistent job storage, and a clean, user-friendly interface.
+Features
+Multiple Backup Types: Support for full and differential backups
+Job Management: Create, start, stop, and monitor backup jobs
+Terminal Interface: User-friendly interface 
+Progress Tracking: Real-time tracking of backup progress
+Logging System: Comprehensive logging of backup activities and states
+Multi-language Support: Support for multiple languages in the interface
 
----
+Getting Started
+Prerequisites
+.NET 8.0 SDK or later
+Windows operating system
+Installation
+Clone the repository:
 
-## 📁 Project Structure
+git clone https://github.com/Nayxooo/secret_easysave.git
+Navigate to the project directory:
 
-BackupManager/
-├── Controllers/
-│ ├── BackupJobController.cs
-│ ├── LanguageController.cs
-├── Models/
-│ ├── BackupJob.cs
-│ ├── BackupType.cs
-├── Services/
-│ ├── BackupService.cs
-│ ├── LogService.cs
-├── Views/
-│ └── MainView.cs
-├── Data/
-│ └── backupJobs.json (auto-generated)
-├── lang.en.json
-├── lang.fr.json
-├── Program.cs
+cd better_saving
+Build the application:
 
+dotnet build
+Run the application:
 
----
-
-## 🚀 Features
-
-- ✅ Create, list, run, and delete backup jobs
-- 💾 Backup types:
-  - Full: copies all files
-  - Differential: only changed files
-- 🌍 Multilingual UI (English 🇺🇸 / French 🇫🇷)
-- 📁 Persistent job data (JSON)
-- 📝 Console output with logging system
-- 👨‍💻 Easily extensible with new features
-
----
-
-## 🧠 Key Concepts
-
-### 🗂️ Backup Types
-
-- **Full Backup**: Copies all files from the source to the destination directory.
-- **Differential Backup**: Copies only the files that have changed since the last full backup.
-
----
-
-## 🧭 Using the App
-
-### ▶️ Running the Application
-
-1. Clone the repository or copy the project files.
-2. Open a terminal in the project directory.
-3. Run:
-
-```bash
 dotnet run
-
-📜 Menu Overview
-Once launched, the main menu is displayed:
-
-1. Create a new backup job
-2. List existing backup jobs
-3. Run a backup job
-4. Run all backup jobs
-5. Delete a backup job
-6. Change language
-0. Exit
-
-🗂️ Managing Backup Jobs
-✅ Creating a Backup Job
-You'll be prompted to enter:
-
+Usage
+Launch the application
+Create a new backup job by specifying:
 Job name
-
-Source directory
-
-Target directory
-
+Source directory (files to backup)
+Target directory (backup destination)
 Backup type (Full or Differential)
+Start the job to begin the backup process
+Monitor the progress through the Terminal GUI
+View logs for detailed information about backup operations
+Interface Screenshots
+Below are screenshots of the EasySave console interface:
 
-Example:
+Main Dashboard
+The main application interface showing job list and available actions Main Dashboard
 
-Enter job name: MyDocuments
-Enter source directory: C:\Users\Me\Documents
-Enter target directory: D:\Backups\Docs
-Enter backup type (full/differential): full
+Job Creation
+Interface for creating a new backup job Job Creation
 
-📋 Listing Jobs
-Displays all saved backup jobs with their configuration.
+Jobs List
+View of completed backup jobs and their results Jobs List
 
-▶️ Running a Job
-Run a specific job by entering its name.
+Job Details
+Detailed view of a specific backup job, including progress and status Job Details
 
-Or run all jobs at once via the corresponding menu option.
+Backup Execution
+A backup job in progress with real-time statistics Backup Execution
 
-❌ Deleting a Job
-Enter the name of the job to delete.
+Language Selection
+Application settings including language selection Language Selection
 
-🌍 Multilingual Interface
-Language selection is handled via the LanguageController. Translations are stored in JSON files:
+Main Dashboard in French
+The main application interface in French Main Dashboard in French
 
-🔤 Example JSON (lang.en.json)
+Project Structure
+Controllers/: Contains the main application controller
+Models/: Contains data models for backup jobs, file hashing, and logging
+Views/: Contains the Terminal user interface
+UMLs/: Contains UML diagrams describing the application architecture
+Documentation
+For a comprehensive overview of the codebase, including detailed explanations of architecture, components, and implementation details, please see the Code Overview document.
 
-```json
-{
-  "menu.createJob": "Create a new backup job",
-  "menu.listJobs": "List existing backup jobs",
-  "menu.runOneJob": "Run a backup job",
-  "menu.runAllJobs": "Run all backup jobs",
-  "menu.deleteJob": "Delete a backup job",
-  "menu.exit": "Exit",
-  "menu.choice": "Enter your choice: ",
-  "menu.invalidChoice": "Invalid choice. Try again.",
-  "menu.enterJobName": "Enter the job name: ",
-  "menu.pressEnter": "Press Enter to continue...",
-  "menu.changeLang": "Change language",
-  "prompt.jobName": "Enter job name: ",
-  "prompt.sourcePath": "Enter source directory: ",
-  "prompt.targetPath": "Enter target directory: ",
-  "prompt.type": "Enter backup type (full/differential): ",
-  "message.jobCreated": "Backup job created successfully.",
-  "message.jobExists": "A job with this name already exists.",
-  "message.jobNotFound": "Backup job not found.",
-  "message.jobDeleted": "Backup job deleted.",
-  "message.jobListEmpty": "No backup jobs found.",
-  "message.jobListHeader": "Registered Backup Jobs:"
-}```
-
-⚙️ Requirements
-.NET 6.0 SDK or later
-
-To check your installed version:
-
-dotnet --version
+Acknowledgments
+Terminal.Gui - GUI toolkit used for the terminal interface
