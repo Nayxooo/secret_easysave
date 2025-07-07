@@ -1,8 +1,14 @@
 [
   {
-    "Name": "testo",
-    "SourcePath": "C:\\Users\\noaar\\Desktop\\pp discord",
-    "TargetPath": "C:\\Users\\noaar\\Desktop\\ScpServer",
+    "Name": "zr",
+    "SourcePath": "",
+    "TargetPath": "",
+    "Type": 0
+  },
+  {
+    "Name": "zghreztzet",
+    "SourcePath": "",
+    "TargetPath": "",
     "Type": 0
   }
 ]

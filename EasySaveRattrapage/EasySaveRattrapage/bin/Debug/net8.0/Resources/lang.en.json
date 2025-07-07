@@ -20,5 +20,7 @@
   "message.jobDeleted": "Backup job deleted.",
   "message.jobListEmpty": "No backup jobs found.",
   "message.jobListHeader": "Registered Backup Jobs:",
-  "message.jobRunning": "Starting the run of backup job : {0}"
+  "message.jobRunning": "Starting the run of backup job : {0}",
+  "message.jobNameEmpty": "Enter a valid jobname.",
+  "message.invalidType": "Invalid type."
 }

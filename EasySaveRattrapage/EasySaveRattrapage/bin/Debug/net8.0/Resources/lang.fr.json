@@ -20,5 +20,7 @@
   "message.jobDeleted": "Sauvegarde supprimee.",
   "message.jobListEmpty": "Aucune sauvegarde enregistree.",
   "message.jobListHeader": "Sauvegardes enregistrees :",
-  "message.jobRunning": "Démarrage sauvegarde : {0}"
+  "message.jobRunning": "Démarrage sauvegarde : {0}",
+  "message.jobNameEmpty": "Entrez un nom valide.",
+  "message.invalidType": "Veuillez entrer un type valide."
 }
