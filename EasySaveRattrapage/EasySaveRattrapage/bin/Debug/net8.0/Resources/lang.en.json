@@ -22,5 +22,6 @@
   "message.jobListHeader": "Registered Backup Jobs:",
   "message.jobRunning": "Starting the run of backup job : {0}",
   "message.jobNameEmpty": "Enter a valid jobname.",
-  "message.invalidType": "Invalid type."
+  "message.invalidType": "Invalid type.",
+  "message.maxJobsReached": "You reached the maximum number of jobs to be registered."
 }
