@@ -22,5 +22,6 @@
   "message.jobListHeader": "Sauvegardes enregistrees :",
   "message.jobRunning": "Démarrage sauvegarde : {0}",
   "message.jobNameEmpty": "Entrez un nom valide.",
-  "message.invalidType": "Veuillez entrer un type valide."
+  "message.invalidType": "Veuillez entrer un type valide.",
+  "message.maxJobsReached": "Vous avez atteint le nombre maximum de jobs pouvant etre enregistres."
 }
